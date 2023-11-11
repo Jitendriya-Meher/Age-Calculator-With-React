@@ -31,17 +31,25 @@ function App() {
   }
 
   return (
-    <div className="">
+    <section className='bg-white dark:bg-gray-900 h-screen'>
 
-      <h1 className="">
+    <div className="absolute top-2 right-2 text-gray-500">
+      Created By Jitendriya Meher
+    </div>
+
+    <div className='py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-20'>
+      <h1 className='mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white'>
         Age Calculator
       </h1>
-      <Form calculateAge={calculateAge}></Form>
+      <p className='mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400 p-2'>
+        Track Your Life&apos;s Progress: Age in Years, Months, Days
+      </p>
+      <Form calculateAge={calculateAge} />
       {
-        age && <AgeResult age={age}></AgeResult>
+        age && <AgeResult age={age} />
       }
-      
     </div>
+  </section>
   );
 }
 
